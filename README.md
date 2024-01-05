@@ -2,32 +2,26 @@
 ## 結構式查詢語言 (SQL) 是一種用於在關聯式資料庫中儲存和處理資訊的程式設計語言
 ## Foreign Key: a reference in one table’s records to the primary key of another table
 ## Primary Key: used to uniquely identify each record in that table
-# AND
+# AND/OR
 ```SQL
 SELECT model
 FROM cars
 WHERE color = 'blue'
-AND year > 2014;
+  AND year > 2014;
 ```
-# AS
+# AS(rename)
 ```SQL
 SELECT name AS 'movie_title'
 FROM movies;
 ```
-# OR
-```SQL
-SELECT name
-FROM customers
-WHERE state = 'CA'
-OR state = 'NY';
-```
 # LIKE / %
+# '%a'特定結尾 '%a%'特定中間 'a%'特定開頭
 ```SQL
 SELECT name
 FROM movies
 WHERE name LIKE 'The%';
 ```
-# _
+# _(底線)
 ```SQL
 SELECT name
 FROM movies
