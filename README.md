@@ -165,9 +165,9 @@ pants.pants_color
 FROM shirts
 CROSS JOIN pants;
 ```
-#
+# 字串長度
 ```SQL
-
+CHAR_LENGTH()
 ``` 
 #
 ```SQL
