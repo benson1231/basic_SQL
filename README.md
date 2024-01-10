@@ -44,11 +44,11 @@ SELECT *
 FROM movies
 WHERE year BETWEEN 1980 AND 1990;
 ```
-# LIMIT
+# LIMIT/OFFSET
 ```SQL
 SELECT *
 FROM movies
-LIMIT 5;
+LIMIT 5 OFFSET 2; 
 ```
 # NULL
 ```SQL
@@ -169,9 +169,15 @@ CROSS JOIN pants;
 ```SQL
 CHAR_LENGTH()
 ``` 
-#
+# COALESCE
 ```SQL
-
+SELECT COALESCE(
+    (SELECT DISTINCT salary
+     FROM Employee
+     ORDER BY salary DESC
+     LIMIT 1 OFFSET 1),
+    NULL
+) AS SecondHighestSalary;
 ```
 #
 ```SQL
